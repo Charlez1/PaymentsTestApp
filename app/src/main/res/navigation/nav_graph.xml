@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.stu.paymentstestapp.features.login.LoginFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_loginFragment_to_paymentListFragment"
+            app:destination="@id/paymentListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentListFragment"
+        android:name="com.stu.paymentstestapp.features.paymentlist.PaymentListFragment"
+        android:label="fragment_payment_list"
+        tools:layout="@layout/fragment_payment_list" >
+        <action
+            android:id="@+id/action_paymentListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+</navigation>
